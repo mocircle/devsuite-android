@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/login_required_layout" />
+
+    <FrameLayout
+        android:id="@+id/logged_in_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/empty_view"
+            style="@style/EmptyViewStyle"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/empty_title_text"
+                style="@style/EmptyViewTitleStyle"
+                android:text="@string/emptyview_messages_title" />
+
+            <TextView
+                android:id="@+id/empty_summary_text"
+                style="@style/EmptyViewSummaryStyle"
+                android:layout_below="@id/empty_title_text"
+                android:text="@string/emptyview_messages_summary" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/loading_view"
+            style="@style/LoadingViewStyle"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/LoadingViewTextStyle"
+                android:text="@string/loadingview_title" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</FrameLayout>

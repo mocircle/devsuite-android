@@ -1,0 +1,52 @@
+<resources>
+    <!-- App level resource -->
+    <string name="app_name">Dev Suite</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_logging_in">Logging in…</string>
+    <string name="dialog_logging_out">Logging out…</string>
+    <string name="dialog_logout_title">Log Out</string>
+    <string name="dialog_logout_msg">Are you sure to log out?</string>
+
+    <!-- Toasts -->
+    <string name="toast_logged_in">You have logged in.</string>
+    <string name="toast_login_error_default">Login failed, please try again.</string>
+    <string name="toast_logged_out">You have logged out.</string>
+    <string name="toast_error_network">Network issue, please try again.</string>
+
+    <!-- Views -->
+    <string name="loadingview_title">Loading…</string>
+    <string name="emptyview_messages_title">No Message</string>
+    <string name="emptyview_messages_summary">You don\'t start any conversation.</string>
+
+    <!-- Activities / Fragments / Widgets -->
+    <string name="login_title">Log In</string>
+    <string name="login_hint_user">User Name / Email</string>
+    <string name="login_hint_pwd">Password</string>
+    <string name="login_btn_login">Log In</string>
+    <string name="login_error_empty">Field cannot be empty</string>
+
+    <string name="signin_required_title">Sign In Required</string>
+    <string name="signin_required_summary">If you want to use this feature, you must sign in first or sign up a new account.</string>
+    <string name="signin_required_btn_signin">Click here to sign in</string>
+    <string name="signin_required_btn_signup">Sign up a new account</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_signin_tip">Sign in to check out more?</string>
+
+    <string name="drawer_summary">Summary</string>
+    <string name="drawer_messages">Messages</string>
+    <string name="drawer_settings">Settings</string>
+
+    <string name="summary_title">Summary</string>
+    <string name="summary_body">User summary page\n(No sign in required)</string>
+    <string name="messages_title">Messages</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_category_account">Account</string>
+    <string name="settings_category_help">Help</string>
+    <string name="settings_pref_logout">Sign Out</string>
+    <string name="settings_pref_about">About</string>
+
+</resources>

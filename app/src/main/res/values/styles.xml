@@ -1,0 +1,178 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.Preference" parent="AppTheme.NoActionBar">
+        <item name="preferenceTheme">@style/MyPreferenceThemeOverlay</item>
+    </style>
+
+    <style name="MyPreferenceThemeOverlay" parent="PreferenceThemeOverlay.v14.Material"></style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Themes -->
+    <style name="NavigationViewTheme">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="AccentColorButtonTheme">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="PrimaryColorAccentTheme">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+    </style>
+
+    <!-- Views -->
+
+    <style name="PrimaryColorButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:theme">@style/PrimaryColorAccentTheme</item>
+    </style>
+
+    <style name="PrimaryColorBorderlessButtonStyle" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:theme">@style/PrimaryColorAccentTheme</item>
+    </style>
+
+    <style name="AccentColorButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:theme">@style/AccentColorButtonTheme</item>
+    </style>
+
+    <style name="AccentColorBorderlessButtonStyle" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:theme">@style/AccentColorButtonTheme</item>
+    </style>
+
+    <style name="EmptyViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="EmptyViewTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="EmptyViewSummaryStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#aaa</item>
+    </style>
+
+    <style name="LoadingViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="LoadingViewTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <!-- LoginActivity -->
+    <style name="LoginLogoStyle">
+        <item name="android:layout_width">96dp</item>
+        <item name="android:layout_height">96dp</item>
+    </style>
+
+    <style name="LoginEditTextStyle">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="LoginButtonStyle" parent="AccentColorButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SignupButtonStyle" parent="PrimaryColorButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- -->
+    <style name="SignInRequiredCardViewStyle">
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">30dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="contentPadding">10dp</item>
+        <item name="cardCornerRadius">@dimen/cardview_radius</item>
+    </style>
+
+    <style name="SignInRequiredTitleStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <style name="SignInRequiredSummaryStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#888888</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="SignInRequiredActionStyle" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:layout_gravity">right</item>
+    </style>
+
+    <!-- Card view style -->
+
+    <style name="ClickableViewStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="ClickableCardViewStyle" parent="CardView.Light">
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Message item -->
+    <style name="MessageLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+    <style name="MessageLayoutStyle.Left">
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="MessageLayoutStyle.Right">
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="MessageContentTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+</resources>

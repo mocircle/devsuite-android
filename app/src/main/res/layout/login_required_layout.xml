@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_required_layout"
+    style="@style/SignInRequiredCardViewStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/SignInRequiredTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signin_required_title" />
+
+        <TextView
+            style="@style/SignInRequiredSummaryStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signin_required_summary" />
+
+        <Button
+            android:id="@+id/signin_button"
+            style="@style/SignInRequiredActionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signin_required_btn_signin" />
+
+        <Button
+            android:id="@+id/signup_button"
+            style="@style/SignInRequiredActionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signin_required_btn_signup"
+            android:theme="@style/PrimaryColorAccentTheme" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

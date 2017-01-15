@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/settings_category_account">
+
+        <Preference
+            android:key="@string/pref_logout"
+            android:title="@string/settings_pref_logout" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_category_help">
+
+        <Preference
+            android:key="@string/pref_about"
+            android:title="@string/settings_pref_about" />
+
+    </PreferenceCategory>
+</PreferenceScreen>
