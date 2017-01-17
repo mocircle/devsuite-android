@@ -1,7 +1,7 @@
 package com.mocircle.devsuite.android.net.retrofit;
 
 import com.mocircle.devsuite.android.data.LightDataService;
-import com.mocircle.devsuite.android.model.User;
+import com.mocircle.devsuite.android.model.Message;
 import com.mocircle.devsuite.android.net.ApiException;
 import com.mocircle.devsuite.android.net.MyApiService;
 import com.mocircle.devsuite.android.net.model.LoginRequest;
@@ -33,11 +33,12 @@ public class MyApiServiceImpl implements MyApiService {
 
     @Override
     public void logout() throws ApiException {
+        executeRequest(client.logout(lightDataService.getAccessToken()));
     }
 
     @Override
-    public List<User> getContactList() throws ApiException {
-        return null;
+    public List<Message> getMessageList() throws ApiException {
+        return executeRequest(client.getMessageList(lightDataService.getAccessToken()));
     }
 
     private <T> T executeRequest(Call<T> call) throws ApiException {

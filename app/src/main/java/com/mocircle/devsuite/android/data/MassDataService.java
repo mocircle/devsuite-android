@@ -1,6 +1,7 @@
 package com.mocircle.devsuite.android.data;
 
 
+import com.mocircle.devsuite.android.model.Message;
 import com.mocircle.devsuite.android.model.User;
 
 import java.util.List;
@@ -25,6 +26,6 @@ public interface MassDataService {
 
     void saveOrUpdate(Iterable<? extends RealmModel> models);
 
-    List<User> getContactList();
+    List<Message> getMessageList();
 
 }

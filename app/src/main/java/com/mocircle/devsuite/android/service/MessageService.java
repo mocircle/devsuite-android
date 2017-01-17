@@ -7,7 +7,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import com.mocircle.devsuite.android.MyApp;
 import com.mocircle.devsuite.android.data.MassDataService;
 import com.mocircle.devsuite.android.logging.MyLog;
-import com.mocircle.devsuite.android.model.User;
+import com.mocircle.devsuite.android.model.Message;
 import com.mocircle.devsuite.android.net.ApiException;
 import com.mocircle.devsuite.android.net.MyApiService;
 
@@ -17,9 +17,9 @@ import javax.inject.Inject;
 
 public class MessageService extends IntentService {
 
-    public static final String ACTION_UPDATE_CONTACTS = "com.mocircle.devsuite.action.UPDATE_CONTACTS";
+    public static final String ACTION_UPDATE_MESSAGES = "com.mocircle.devsuite.action.UPDATE_MESSAGES";
 
-    public static final String ACTION_CONTACTS_UPDATED = "com.mocircle.devsuite.action.CONTACTS_UPDATED";
+    public static final String ACTION_MESSAGES_UPDATED = "com.mocircle.devsuite.action.MESSAGES_UPDATED";
 
     private static final String TAG = "MessageService";
 
@@ -33,9 +33,9 @@ public class MessageService extends IntentService {
         super("MessageService");
     }
 
-    public static void startUpdateContactsService() {
+    public static void startUpdateMessagesService() {
         Intent intent = new Intent(MyApp.getApp(), MessageService.class);
-        intent.setAction(ACTION_UPDATE_CONTACTS);
+        intent.setAction(ACTION_UPDATE_MESSAGES);
         MyApp.getApp().startService(intent);
     }
 
@@ -45,8 +45,8 @@ public class MessageService extends IntentService {
 
         if (intent != null && intent.getAction() != null) {
             String action = intent.getAction();
-            if (action.equals(ACTION_UPDATE_CONTACTS)) {
-                updateContacts();
+            if (action.equals(ACTION_UPDATE_MESSAGES)) {
+                updateMessages();
             } else {
                 MyLog.w(TAG, "Unknown action: " + action);
             }
@@ -55,15 +55,15 @@ public class MessageService extends IntentService {
         massDataService.disconnect();
     }
 
-    private void updateContacts() {
+    private void updateMessages() {
         try {
-            final List<User> list = apiService.getContactList();
+            final List<Message> list = apiService.getMessageList();
             if (list != null) {
                 massDataService.saveOrUpdate(list);
-                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(ACTION_CONTACTS_UPDATED));
+                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(ACTION_MESSAGES_UPDATED));
             }
         } catch (ApiException e) {
-            e.printStackTrace();
+            e.printStackTrace();//TODO
         }
     }
 

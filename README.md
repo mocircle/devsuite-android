@@ -8,8 +8,9 @@ A simple development suite for android.
 
 
 ## Key Components/Libraries
-* dagger
-* retrofit
+* dagger 2.2
+* retrofit 2.1
+* realm 2.2.2
 * MVP
 
 ## Key Notes

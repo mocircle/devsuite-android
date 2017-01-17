@@ -1,7 +1,7 @@
 package com.mocircle.devsuite.android.data.realm;
 
 import com.mocircle.devsuite.android.data.MassDataService;
-import com.mocircle.devsuite.android.model.User;
+import com.mocircle.devsuite.android.model.Message;
 
 import java.util.List;
 
@@ -78,8 +78,8 @@ public class MassDataServiceImpl implements MassDataService {
     }
 
     @Override
-    public List<User> getContactList() {
-        return realm.where(User.class).findAll();
+    public List<Message> getMessageList() {
+        return realm.where(Message.class).findAll();
     }
 
 }

@@ -1,6 +1,6 @@
 package com.mocircle.devsuite.android.net;
 
-import com.mocircle.devsuite.android.model.User;
+import com.mocircle.devsuite.android.model.Message;
 import com.mocircle.devsuite.android.net.model.LoginResponse;
 
 import java.util.List;
@@ -11,6 +11,6 @@ public interface MyApiService {
 
     void logout() throws ApiException;
 
-    List<User> getContactList() throws ApiException;
+    List<Message> getMessageList() throws ApiException;
 
 }
