@@ -43,8 +43,7 @@
                     style="@style/LoginEditTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/login_hint_user"
-                    android:text="" />
+                    android:hint="@string/login_hint_user" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -56,14 +55,19 @@
                     style="@style/LoginEditTextStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/login_hint_pwd"
-                    android:text="" />
+                    android:hint="@string/login_hint_pwd" />
             </android.support.design.widget.TextInputLayout>
 
             <Button
                 style="@style/LoginButtonStyle"
                 android:onClick="clickSignInButton"
                 android:text="@string/login_btn_login" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/login_txt_account" />
 
         </LinearLayout>
     </ScrollView>

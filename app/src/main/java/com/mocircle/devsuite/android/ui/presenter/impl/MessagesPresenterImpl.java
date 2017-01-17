@@ -4,7 +4,6 @@ import com.mocircle.devsuite.android.data.LightDataService;
 import com.mocircle.devsuite.android.data.MassDataService;
 import com.mocircle.devsuite.android.ui.presenter.MessagesPresenter;
 import com.mocircle.devsuite.android.ui.presenter.impl.base.FragmentPresenterImpl;
-import com.mocircle.devsuite.android.ui.view.AuthenticationAwareView;
 import com.mocircle.devsuite.android.ui.view.MessagesView;
 
 public class MessagesPresenterImpl extends FragmentPresenterImpl<MessagesView> implements MessagesPresenter {

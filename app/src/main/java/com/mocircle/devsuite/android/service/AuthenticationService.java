@@ -86,7 +86,11 @@ public class AuthenticationService extends IntentService {
             } catch (ApiException e) {
                 // Login failed
                 Intent action = new Intent(ACTION_USER_LOGIN_FAILED);
-                action.putExtra(EXTRA_MSG, getString(R.string.toast_error_network));
+                String msg = getString(R.string.toast_error_network);
+                if (!e.isIOException() && e.getErrorResponse() != null) {
+                    msg = e.getErrorResponse().errMsg;
+                }
+                action.putExtra(EXTRA_MSG, msg);
                 LocalBroadcastManager.getInstance(this).sendBroadcast(action);
                 return;
             }
@@ -97,12 +101,6 @@ public class AuthenticationService extends IntentService {
 
                 // Send logged in broadcast
                 LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(ACTION_USER_LOGGED_IN));
-            } else {
-
-                // Login failed
-                Intent action = new Intent(ACTION_USER_LOGIN_FAILED);
-                // action.putExtra(EXTRA_MSG, result.errMsg); //TODO
-                LocalBroadcastManager.getInstance(this).sendBroadcast(action);
             }
         } else {
             // Login failed
